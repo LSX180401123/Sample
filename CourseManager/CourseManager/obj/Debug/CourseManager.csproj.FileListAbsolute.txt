@@ -323,10 +323,6 @@ D:\hahaha\Sample\CourseManager\CourseManager\bin\zh-Hans\Microsoft.Web.WebPages.
 D:\hahaha\Sample\CourseManager\CourseManager\bin\zh-Hans\WebMatrix.WebData.resources.dll
 D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.dll
 D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.pdb
-D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201906300918.resources
+D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201912.resources
 D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.csproj.GenerateResource.Cache
-D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Create201906300925.resources
 D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.csprojResolveAssemblyReference.cache
-D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Update20191125446.resources
-D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations.Update20191125456.resources
-D:\hahaha\Sample\CourseManager\CourseManager\obj\Debug\CourseManager.Migrations._1225.resources

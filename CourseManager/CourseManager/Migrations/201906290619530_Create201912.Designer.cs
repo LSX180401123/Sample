@@ -5,13 +5,13 @@ namespace CourseManager.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    public sealed partial class Update20191125456 : IMigrationMetadata
+    public sealed partial class Create201912 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Update20191125456));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Create201912));
         
         string IMigrationMetadata.Id
         {
-            get { return "201906290858050_Update20191125456"; }
+            get { return "201906290619530_Create201912"; }
         }
         
         string IMigrationMetadata.Source

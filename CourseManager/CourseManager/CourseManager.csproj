@@ -167,6 +167,7 @@
     <Compile Include="BLLs\CourseManagement\Classes\ClassRepository.cs" />
     <Compile Include="BLLs\CourseManagement\Classes\CourseDetail.cs" />
     <Compile Include="BLLs\CourseManagement\Classes\IClassRepository.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ActionLinkController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
@@ -179,25 +180,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201906290852087_Update20191125446.cs" />
-    <Compile Include="Migrations\201906290852087_Update20191125446.Designer.cs">
-      <DependentUpon>201906290852087_Update20191125446.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906290858050_Update20191125456.cs" />
-    <Compile Include="Migrations\201906290858050_Update20191125456.Designer.cs">
-      <DependentUpon>201906290858050_Update20191125456.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906290914306_1225.cs" />
-    <Compile Include="Migrations\201906290914306_1225.Designer.cs">
-      <DependentUpon>201906290914306_1225.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906300118483_Create201906300918.cs" />
-    <Compile Include="Migrations\201906300118483_Create201906300918.Designer.cs">
-      <DependentUpon>201906300118483_Create201906300918.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201906300125248_Create201906300925.cs" />
-    <Compile Include="Migrations\201906300125248_Create201906300925.Designer.cs">
-      <DependentUpon>201906300125248_Create201906300925.cs</DependentUpon>
+    <Compile Include="Migrations\201906290619530_Create201912.cs" />
+    <Compile Include="Migrations\201906290619530_Create201912.Designer.cs">
+      <DependentUpon>201906290619530_Create201912.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seeds\ActionLinkCreator.cs" />
@@ -349,7 +334,6 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveExternalLoginsPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -399,6 +383,7 @@
     <Content Include="Views\ActionLink\Edit.cshtml" />
     <Content Include="Views\ActionLink\Delete.cshtml" />
     <Content Include="Views\Class\ShowCourseManegement.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -412,20 +397,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906290852087_Update20191125446.resx">
-      <DependentUpon>201906290852087_Update20191125446.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906290858050_Update20191125456.resx">
-      <DependentUpon>201906290858050_Update20191125456.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906290914306_1225.resx">
-      <DependentUpon>201906290914306_1225.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906300118483_Create201906300918.resx">
-      <DependentUpon>201906300118483_Create201906300918.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201906300125248_Create201906300925.resx">
-      <DependentUpon>201906300125248_Create201906300925.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906290619530_Create201912.resx">
+      <DependentUpon>201906290619530_Create201912.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
