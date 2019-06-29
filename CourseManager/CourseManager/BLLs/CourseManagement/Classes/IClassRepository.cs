@@ -8,5 +8,6 @@ namespace CourseManager.BLLs.CourseManagement.Classes
 {
     interface IClassRepository
     {
+        List<CourseDetail> GetClassCourse(int id);
     }
 }

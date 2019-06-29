@@ -164,17 +164,32 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BLLs\CourseManagement\Classes\ClassRepository.cs" />
+    <Compile Include="BLLs\CourseManagement\Classes\CourseDetail.cs" />
     <Compile Include="BLLs\CourseManagement\Classes\IClassRepository.cs" />
     <Compile Include="Controllers\ActionLinkController.cs" />
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseManagementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IClassRepository_repository.cs" />
     <Compile Include="Controllers\SideBarController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906290852087_Update20191125446.cs" />
+    <Compile Include="Migrations\201906290852087_Update20191125446.Designer.cs">
+      <DependentUpon>201906290852087_Update20191125446.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906290858050_Update20191125456.cs" />
+    <Compile Include="Migrations\201906290858050_Update20191125456.Designer.cs">
+      <DependentUpon>201906290858050_Update20191125456.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906290914306_1225.cs" />
+    <Compile Include="Migrations\201906290914306_1225.Designer.cs">
+      <DependentUpon>201906290914306_1225.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201906300118483_Create201906300918.cs" />
     <Compile Include="Migrations\201906300118483_Create201906300918.Designer.cs">
@@ -187,7 +202,11 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seeds\ActionLinkCreator.cs" />
     <Compile Include="Migrations\Seeds\SideBarCreator.cs" />
+    <Compile Include="Migrations\Seeds\UserCreator.cs" />
     <Compile Include="Models\ActionLink.cs" />
+    <Compile Include="Models\CourseManagementExtention.cs" />
+    <Compile Include="Models\StudentsExtention.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Models\Classes.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -198,7 +217,7 @@
     <Compile Include="Models\CourseManagements.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\CourseManager.Context.cs">
+    <Compile Include="Models\CourseManagerEntities.cs">
       <SubType>Code</SubType>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -393,6 +412,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906290852087_Update20191125446.resx">
+      <DependentUpon>201906290852087_Update20191125446.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906290858050_Update20191125456.resx">
+      <DependentUpon>201906290858050_Update20191125456.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906290914306_1225.resx">
+      <DependentUpon>201906290914306_1225.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906300118483_Create201906300918.resx">
       <DependentUpon>201906300118483_Create201906300918.cs</DependentUpon>
     </EmbeddedResource>
