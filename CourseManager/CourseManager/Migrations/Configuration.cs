@@ -1,18 +1,19 @@
 namespace CourseManager.Migrations
 {
+    using CourseManager.Migrations.Seeds;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<CourseManager.Models.courseManagerEntities>
+    internal sealed class Configuration : DbMigrationsConfiguration<CourseManager.Models.CourseManagerEntities>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(CourseManager.Models.courseManagerEntities context)
+        protected override void Seed(CourseManager.Models.CourseManagerEntities context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -26,6 +27,8 @@ namespace CourseManager.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            new ActionLinkCreator(context).Seed();
+            new SideBarCreator(context).Seed();
         }
     }
 }

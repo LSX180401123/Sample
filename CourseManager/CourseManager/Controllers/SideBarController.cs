@@ -9,116 +9,106 @@ using CourseManager.Models;
 
 namespace CourseManager.Controllers
 {
-    public class ClassController : Controller
+    public class SideBarController : Controller
     {
         private CourseManagerEntities db = new CourseManagerEntities();
 
         //
-        // GET: /Class/
+        // GET: /SideBar/
 
         public ActionResult Index()
         {
-            return View(db.Classes.ToList());
+            return View(db.SideBars.ToList());
         }
 
         //
-        // GET: /Class/Details/5
+        // GET: /SideBar/Details/5
 
         public ActionResult Details(int id = 0)
         {
-            Classes classes = db.Classes.Find(id);
-            if (classes == null)
+            SideBars sidebars = db.SideBars.Find(id);
+            if (sidebars == null)
             {
                 return HttpNotFound();
             }
-            return View(classes);
+            return View(sidebars);
         }
 
         //
-        // GET: /Class/Create
+        // GET: /SideBar/Create
 
         public ActionResult Create()
         {
-            var teachers = db.Teacher.ToList();
-            ViewBag.Teacher = teachers;
-
             return View();
         }
 
         //
-        // POST: /Class/Create
+        // POST: /SideBar/Create
 
         [HttpPost]
-        public ActionResult Create(Classes classes)
+        public ActionResult Create(SideBars sidebars)
         {
             if (ModelState.IsValid)
             {
-                db.Classes.Add(classes);
+                db.SideBars.Add(sidebars);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(classes);
+            return View(sidebars);
         }
 
         //
-        // GET: /Class/Edit/5
+        // GET: /SideBar/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
-            var teachers = db.Teacher.ToList();
-            ViewBag.Teacher = teachers;
-            Classes classes = db.Classes.Find(id);
-            if (classes == null)
+            SideBars sidebars = db.SideBars.Find(id);
+            if (sidebars == null)
             {
                 return HttpNotFound();
-                
             }
-            return View(classes);
+            return View(sidebars);
         }
 
         //
-        // POST: /Class/Edit/5
+        // POST: /SideBar/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(Classes classes)
+        public ActionResult Edit(SideBars sidebars)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(classes).State = EntityState.Modified;
+                db.Entry(sidebars).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(classes);
+            return View(sidebars);
         }
 
         //
-        // GET: /Class/Delete/5
+        // GET: /SideBar/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
-            Classes classes = db.Classes.Find(id);
-            if (classes == null)
+            SideBars sidebars = db.SideBars.Find(id);
+            if (sidebars == null)
             {
                 return HttpNotFound();
             }
-            return View(classes);
+            return View(sidebars);
         }
 
         //
-        // POST: /Class/Delete/5
+        // POST: /SideBar/Delete/5
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            Classes classes = db.Classes.Find(id);
-            db.Classes.Remove(classes);
+            SideBars sidebars = db.SideBars.Find(id);
+            db.SideBars.Remove(sidebars);
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
-        public ActionResult ShowCourseManegement(int id)
-        { 
-           return View();
         }
 
         protected override void Dispose(bool disposing)

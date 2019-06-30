@@ -11,7 +11,7 @@ namespace CourseManager.Controllers
 {
     public class StudentController : Controller
     {
-        private courseManagerEntities db = new courseManagerEntities();
+        private CourseManagerEntities db = new CourseManagerEntities();
 
         //
         // GET: /Student/

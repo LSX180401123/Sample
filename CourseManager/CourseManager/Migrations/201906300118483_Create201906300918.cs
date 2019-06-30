@@ -3,7 +3,7 @@ namespace CourseManager.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Create201911271111 : DbMigration
+    public partial class Create201906300918 : DbMigration
     {
         public override void Up()
         {
@@ -56,10 +56,34 @@ namespace CourseManager.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
+            CreateTable(
+                "dbo.ActionLinks",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Controller = c.String(),
+                        Action = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.SideBars",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Controller = c.String(),
+                        Action = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
         }
         
         public override void Down()
         {
+            DropTable("dbo.SideBars");
+            DropTable("dbo.ActionLinks");
             DropTable("dbo.Courses");
             DropTable("dbo.CourseManagements");
             DropTable("dbo.Students");

@@ -17,7 +17,7 @@ namespace CourseManager.Models
                 {
                     return "";
                 }
-                courseManagerEntities db = new courseManagerEntities();
+                CourseManagerEntities db = new CourseManagerEntities();
                 var teacher = db.Teacher.Where(t => t.Id == TeacherId.Value).FirstOrDefault();
                 if (teacher == null)
                 {

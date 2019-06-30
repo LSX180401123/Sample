@@ -1,4 +1,4 @@
-﻿@model CourseManager.Models.Classes
+﻿@model CourseManager.Models.ActionLink
 
 @{
     ViewBag.Title = "Delete";
@@ -8,7 +8,7 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <fieldset>
-    <legend>Classes</legend>
+    <legend>ActionLink</legend>
 
     <div class="display-label">
          @Html.DisplayNameFor(model => model.Name)
@@ -18,17 +18,17 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.TeacherId)
+         @Html.DisplayNameFor(model => model.Controller)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.TeacherId)
+        @Html.DisplayFor(model => model.Controller)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.TeacherName)
+         @Html.DisplayNameFor(model => model.Action)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.TeacherName)
+        @Html.DisplayFor(model => model.Action)
     </div>
 </fieldset>
 @using (Html.BeginForm()) {

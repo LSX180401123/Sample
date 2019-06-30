@@ -1,4 +1,4 @@
-﻿@model CourseManager.Models.Classes
+﻿@model CourseManager.Models.ActionLink
 
 @{
     ViewBag.Title = "Details";
@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <fieldset>
-    <legend>Classes</legend>
+    <legend>ActionLink</legend>
 
     <div class="display-label">
          @Html.DisplayNameFor(model => model.Name)
@@ -17,17 +17,17 @@
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.TeacherId)
+         @Html.DisplayNameFor(model => model.Controller)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.TeacherId)
+        @Html.DisplayFor(model => model.Controller)
     </div>
 
     <div class="display-label">
-         @Html.DisplayNameFor(model => model.TeacherName)
+         @Html.DisplayNameFor(model => model.Action)
     </div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.TeacherName)
+        @Html.DisplayFor(model => model.Action)
     </div>
 </fieldset>
 <p>

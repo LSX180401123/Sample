@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="zh">
-    <head>
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta charset="utf-8" />
         <title>@ViewBag.Title - 我的 ASP.NET MVC 应用程序</title>
@@ -8,17 +8,29 @@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
         @Scripts.Render("~/bundles/modernizr")
+
+        <style>
+            .sidebar{
+                padding-top:50px;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+            }
+            .sidebar li a{
+                color:#333;
+            }
+        </style>
     </head>
     <body>
         @Html.Action("Navbar","Home")
-        <header>
-            
-        </header>
-        <div id="body">
+        <div id="body" class="container body-content">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
+            <div class="col-md-3">
+                @Html.Action("SideBar","Home")
+            </div>
+            <div class=col-md-9>
+                 @RenderBody()
+            </div>
         </div>
         <footer>
             <div class="content-wrapper">
@@ -28,7 +40,9 @@
             </div>
         </footer>
 
+       
         @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
     </body>
 </html>
