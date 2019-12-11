@@ -6,12 +6,15 @@
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
+                    @Html.ActionLink("应用名称", "Index", new { area = "" }, new { @class="navbar-brand"})
                     <nav>
+                        <div class="navbar-collapse collapse">
                         <ul id="menu">
                             <li>@Html.ActionLink("主页", "Index", "Home")</li>
                             <li>@Html.ActionLink("关于", "About", "Home")</li>
                             <li>@Html.ActionLink("联系方式", "Contact", "Home")</li>
                         </ul>
+                            </div>
                     </nav>
                 </div>
             </div>
