@@ -7,12 +7,18 @@ namespace CourseManager.Models
 {
     public class WebsiteInfo
     {
-        public WebsiteInfo(string siteName, string copyRight)
+        public const string SiteName = "课程管理系统";
+
+        public List<ActionLink> ActionLinks { get; set; }
+
+        public WebsiteInfo()
         {
-            SiteName = siteName;
-            CopyRight = copyRight;
+            ActionLinks = new List<ActionLink>{
+        new ActionLink{Name="主页",Controller="Home",Action="Index"},
+         new ActionLink{Name="关于",Controller="Home",Action="About"},
+          new ActionLink{Name="联系方式",Controller="Home",Action="Contact"},
+           };
         }
-        public string SiteName { get; set; }
-        public string CopyRight { get; set; }
+       
     }
 }
